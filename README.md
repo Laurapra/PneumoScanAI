@@ -3,7 +3,7 @@
 ## 📋 Descripción del Proyecto
 Este proyecto inplementa un sistema de inteligencia artificial para la detección automática de neumonía en radiografías de tórax utilizando Redes Neuronales Convolucionales (CNN): El sistema utiliza técnicas de deep learning y transfer learning para asistir a profesionales de la salud en el diagnóstico rápido y preciso.
 
-##🎯Objetivos
+## 🎯Objetivos
 - **Objetivo Principal**: Desarrollar un modelo de CNN capaz de detectar y clasificar neumonía en radiografías de tórax con alta precisión.
 
 ## Objetivos Específicos
