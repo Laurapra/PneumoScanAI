@@ -1,31 +1,32 @@
 # Pipeline Completo - Proyecto Detección de Neumonía
 # Integración de todo el proyecto desde setup hasta evaluación final
 
+from datetime import datetime
+import tensorflow as tf
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
 import os
 import sys
 import warnings
 warnings.filterwarnings('ignore')
 
-#Imports necesarios
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-import tensorflow as tf
-from datetime import datetime
+# Imports necesarios
 
-#Imports de nuestros módulos (asumiendo que están en archivos separados)
-#from pneumonia_setup import Config, setup_directories, check_dataset_structure, perform_eda, create_data_generators, calculate_class_weights
-#from pneumonia_models import PneumoniaModels, train_all_models  
-#from pneumonia_evaluation import PneumoniaEvaluator, complete_evaluation
+# Imports de nuestros módulos (asumiendo que están en archivos separados)
+# from pneumonia_setup import Config, setup_directories, check_dataset_structure, perform_eda, create_data_generators, calculate_class_weights
+# from pneumonia_models import PneumoniaModels, train_all_models
+# from pneumonia_evaluation import PneumoniaEvaluator, complete_evaluation
 print(" PROYECTO CAPSTONE: DETECCIÓN DE NEUMONÍA CON CNN")
 print("=" * 60)
 print("Desarrollado para análisis inteligente de radiografías de tórax")
 print(f"Fecha de ejecución: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 print("=" * 60)
 
+
 class PneumoniaProject:
     """Clase principal que maneja todo el pipeline del proyecto"""
-    
+
     def __init__(self):
         self.config = self._setup_config()
         self.train_gen = None
@@ -35,15 +36,15 @@ class PneumoniaProject:
         self.model_manager = None
         self.evaluator = None
         self.results_summary = None
-        
+
     def _setup_config(self):
         """Configuración del proyecto"""
         class Config:
-            #Rutas de datos
-            DATA_PATH = "chest_xray/"
-            TRAIN_PATH = "chest_xray/train/"
-            VAL_PATH = "chest_xray/val/"
-            TEST_PATH = "chest_xray/test/"
+            # Rutas de datos
+            DATA_PATH = "data/chest_xray"
+            TRAIN_PATH=f"{DATA_PATH}/train"
+            VAL_PATH=f"{DATA_PATH}/val"
+            TEST_PATH=f"{DATA_PATH}/test"
             
             #Parámetros de imagen
             IMG_SIZE = (224, 224)
