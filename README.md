@@ -66,8 +66,9 @@ Este proyecto implementa un **sistema de inteligencia artificial completo** para
 - 10GB espacio libre en disco
   1. **Clonar el Repositorio**
      git clone https://github.com/tu-usuario/capstone-neumonia.git
+     
       cd PNEUMOSCANIA
-  2. **Crear Entorno Virtual**
+  3. **Crear Entorno Virtual**
      # Crear entorno virtual
      python -m venv pneumonia_env
 
@@ -87,7 +88,9 @@ Este proyecto implementa un **sistema de inteligencia artificial completo** para
 ## 🎯 **Uso del Sistema**
 🚀 **Ejecución Completa (Recomendado)
 # Ejecutar pipeline completo automático
+
 python src/pneumonia_complete_pipeline.py
+
 **Esto ejecutará automáticamente**:
 1. Configuración inicial y verificación del dataset
 2. Análisis exploratorio de datos (EDA) avanzado
