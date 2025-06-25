@@ -9,7 +9,7 @@ import seaborn as sns
 from pathlib import Path
 import warnings
 warnings.filterwarnings("ignore")
-
+from PIL import Image
 #Biblioteca para procesamiento de imágenes
 import cv2
 import PIL as Image

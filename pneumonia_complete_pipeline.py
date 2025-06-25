@@ -12,7 +12,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 from src.pneumonia_setup import Config, main as setup_main
-from src.models import train_all_models
+from src.models import train_all_models, PneumoniaModels
 from src.evaluacion_analisis import complete_evaluation_with_gradcam
 
 
