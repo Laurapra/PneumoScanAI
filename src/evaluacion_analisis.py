@@ -93,8 +93,6 @@ class PneumoniaEvaluator:
                 print(f"     F1-Score: {metrics['f1-score']:.4f}")
         
         return self.results[model_name]
-
-    #TUS MÉTODOS ORIGINALES (SIN CAMBIOS)
     
     def plot_confusion_matrices(self, models_to_plot=None):
         """Visualizar matrices de confusión"""

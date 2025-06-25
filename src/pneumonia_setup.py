@@ -119,7 +119,7 @@ def perform_eda():
     
     # Crear DataFrame para visualización
     df_counts = pd.DataFrame(data_info).T
-    print("\n📊 Distribución de imágenes:")
+    print("\n Distribución de imágenes:")
     print(df_counts)
     
     # Calcular estadísticas
@@ -127,7 +127,7 @@ def perform_eda():
     total_pneumonia = sum(df_counts['PNEUMONIA'])
     total_images = total_normal + total_pneumonia
     
-    print(f"\n📈 Estadísticas generales:")
+    print(f"\n Estadísticas generales:")
     print(f"Total de imágenes: {total_images}")
     print(f"Normal: {total_normal} ({total_normal/total_images*100:.1f}%)")
     print(f"Neumonía: {total_pneumonia} ({total_pneumonia/total_images*100:.1f}%)")
@@ -136,7 +136,7 @@ def perform_eda():
     # Identificar desequilibrio de clases
     if total_pneumonia > total_normal * 1.5:
         print("\n  DESEQUILIBRIO DE CLASES DETECTADO")
-        print("   Se necesitarán técnicas de balanceamiento:")
+        print("    Se necesitarán técnicas de balanceamiento:")
         print("   - Class weighting")
         print("   - Data augmentation")
         print("   - Focal loss")
@@ -236,7 +236,7 @@ def calculate_class_weights(train_generator):
 #función principal para ejecutar la configuración inicial
 def main():
   """Función principal para ejecutar la configuración inicial"""
-  print("🚀 INICIANDO PneumoScanAI")
+  print(" INICIANDO PneumoScanAI")
   print("="*50)
   
   #1.configurar directorios

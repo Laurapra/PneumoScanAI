@@ -11,12 +11,11 @@ import sys
 import warnings
 warnings.filterwarnings('ignore')
 
-# Imports necesarios
+from src.pneumonia_setup import Config, main as setup_main
+from src.models import train_all_models
+from src.evaluacion_analisis import complete_evaluation_with_gradcam
 
-# Imports de nuestros módulos (asumiendo que están en archivos separados)
-# from pneumonia_setup import Config, setup_directories, check_dataset_structure, perform_eda, create_data_generators, calculate_class_weights
-# from pneumonia_models import PneumoniaModels, train_all_models
-# from pneumonia_evaluation import PneumoniaEvaluator, complete_evaluation
+
 print(" PROYECTO CAPSTONE: DETECCIÓN DE NEUMONÍA CON CNN")
 print("=" * 60)
 print("Desarrollado para análisis inteligente de radiografías de tórax")
