@@ -221,13 +221,7 @@ print(report)
 | **Recall** | 93.8% | 88.9% | 83.2% | - |
 | **F1-Score** | 94.4% | 87.2% | 81.8% | - |
 | **MAE** | - | - | - | 0.847 |
-
-### Casos de Uso Exitosos
-
-✅ **Hospital General**: Reducción del 65% en tiempo de diagnóstico  
-✅ **Clínica Rural**: Detección temprana de 23 casos críticos  
-✅ **Centro de Investigación**: Análisis de 10,000+ radiografías  
-✅ **Programa de Screening**: Identificación de brotes epidemiológicos  
+ 
 
 ### Ejemplo de Reporte Generado
 
