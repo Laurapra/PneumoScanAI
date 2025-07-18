@@ -275,8 +275,6 @@ pneumoscan-ai/
 │   └── 📁 cpu_local/
 │       ├── 📁 plots/
 │       └── 📁 reports/
-├── 📁 notebooks/                       # Jupyter notebooks
-├── 📁 docs/                           # Documentación
 └── 📁 tests/                          # Tests unitarios
 ```
 
