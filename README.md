@@ -23,7 +23,6 @@
 - [Resultados](#-resultados)
 - [Estructura del Proyecto](#-estructura-del-proyecto)
 - [Metodología](#-metodología)
-- [Contribuir](#-contribuir)
 - [Licencia](#-licencia)
 - [Contacto](#-contacto)
 
