@@ -304,32 +304,6 @@ pneumoscan-ai/
 - **Fusión Multi-Modal**: Integración inteligente de múltiples fuentes de datos
 - **Uncertainty Quantification**: Estimación de confianza para casos dudosos
 
-## 🤝 Contribuir
-
-¡Las contribuciones son bienvenidas! Por favor lee nuestras [Guías de Contribución](CONTRIBUTING.md) antes de enviar un Pull Request.
-
-### Cómo Contribuir
-
-1. **Fork** el proyecto
-2. Crea una **rama** para tu feature (`git checkout -b feature/AmazingFeature`)
-3. **Commit** tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un **Pull Request**
-
-### Áreas de Contribución
-
-- 🔬 **Investigación**: Nuevos algoritmos y arquitecturas
-- 💻 **Desarrollo**: Mejoras de código y optimizaciones
-- 📊 **Datos**: Expansión y mejora del dataset
-- 🏥 **Validación Clínica**: Testing en entornos médicos reales
-- 📚 **Documentación**: Mejoras en documentación y tutoriales
-
-## 🏆 Reconocimientos
-
-- **Samsung Innovation Campus 2024** - Proyecto Capstone Destacado
-- **Equipo DevSharks BQ** - Desarrollo y implementación
-- **Comunidad Médica** - Validación y feedback clínico
-- **Kaggle Community** - Dataset de radiografías de tórax
 
 ## 📄 Licencia
 
@@ -339,14 +313,11 @@ Este proyecto está licenciado bajo la Licencia MIT - ve el archivo [LICENSE](LI
 
 ### Equipo DevSharks BQ
 
-- **GitHub**: [@tu-usuario](https://github.com/tu-usuario)
+- **GitHub**: [@tu-usuario](https://github.com/laurapra17)
 - **Email**: pneumoscan.devsharksbq@gmail.com
-- **LinkedIn**: [DevSharks BQ](https://linkedin.com/company/devsharksbq)
+- **LinkedIn**: [Laura Patricia Rodriguez Angulo]((https://www.linkedin.com/in/laurarodriguez17/))
 
 ### Enlaces del Proyecto
-
-- **Repositorio**: [https://github.com/tu-usuario/pneumoscan-ai](https://github.com/tu-usuario/pneumoscan-ai)
-- **Issues**: [https://github.com/tu-usuario/pneumoscan-ai/issues](https://github.com/tu-usuario/pneumoscan-ai/issues)
 - **Documentación**: [https://pneumoscan-ai.readthedocs.io](https://pneumoscan-ai.readthedocs.io)
 
 ---
@@ -354,8 +325,6 @@ Este proyecto está licenciado bajo la Licencia MIT - ve el archivo [LICENSE](LI
 <div align="center">
 
 **⭐ Si este proyecto te ha sido útil, ¡no olvides darle una estrella! ⭐**
-
-Desarrollado con ❤️ para mejorar el diagnóstico médico mundial
 
 [⬆ Volver arriba](#-pneumoscan-ai)
 
