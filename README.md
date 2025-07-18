@@ -9,7 +9,7 @@
 
 **Sistema Avanzado de Inteligencia Artificial para Detección, Clasificación y Análisis Automático de Neumonía en Radiografías de Tórax**
 
-[Características](#-características-principales) • [Instalación](#-instalación) • [Uso](#-uso) • [Resultados](#-resultados) • [Contribuir](#-contribuir)
+[Características](#-características-principales) • [Instalación](#-instalación) • [Uso](#-uso) • [Resultados](#-resultados) 
 
 </div>
 
