@@ -31,7 +31,7 @@
 
 **PneumoScan AI** es un sistema revolucionario de inteligencia artificial médica que trasciende la detección binaria tradicional de neumonía. Desarrollado como proyecto Capstone para Samsung Innovation Campus 2024, implementa un modelo CNN multi-tarea capaz de realizar diagnósticos holísticos integrando análisis de radiografías con datos clínicos.
 
-### 🎖️ Proyecto Ganador
+### 🎖️ Proyecto
 - **Samsung Innovation Campus 2024** - Proyecto Capstone
 - **Equipo:** DevSharks BQ
 - **Versión:** 1.0.0
