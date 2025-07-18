@@ -313,13 +313,8 @@ Este proyecto está licenciado bajo la Licencia MIT - ve el archivo [LICENSE](LI
 
 ### Equipo DevSharks BQ
 
-- **GitHub**: [@tu-usuario](https://github.com/laurapra17)
-- **Email**: pneumoscan.devsharksbq@gmail.com
+- **GitHub**: [@laurapra17](https://github.com/laurapra17)
 - **LinkedIn**: [Laura Patricia Rodriguez Angulo]((https://www.linkedin.com/in/laurarodriguez17/))
-
-### Enlaces del Proyecto
-- **Documentación**: [https://pneumoscan-ai.readthedocs.io](https://pneumoscan-ai.readthedocs.io)
-
 ---
 
 <div align="center">
