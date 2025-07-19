@@ -9,7 +9,7 @@
 
 **Sistema Avanzado de Inteligencia Artificial para Detección, Clasificación y Análisis Automático de Neumonía en Radiografías de Tórax**
 
-[Características](#-características-principales) • [Instalación](#-instalación) • [Uso](#-uso) • [Resultados](#-resultados) • [Contribuir](#-contribuir)
+[Características](#-características-principales) • [Instalación](#-instalación) • [Uso](#-uso) • [Resultados](#-resultados) 
 
 </div>
 
@@ -23,7 +23,6 @@
 - [Resultados](#-resultados)
 - [Estructura del Proyecto](#-estructura-del-proyecto)
 - [Metodología](#-metodología)
-- [Contribuir](#-contribuir)
 - [Licencia](#-licencia)
 - [Contacto](#-contacto)
 
@@ -221,13 +220,7 @@ print(report)
 | **Recall** | 93.8% | 88.9% | 83.2% | - |
 | **F1-Score** | 94.4% | 87.2% | 81.8% | - |
 | **MAE** | - | - | - | 0.847 |
-
-### Casos de Uso Exitosos
-
-✅ **Hospital General**: Reducción del 65% en tiempo de diagnóstico  
-✅ **Clínica Rural**: Detección temprana de 23 casos críticos  
-✅ **Centro de Investigación**: Análisis de 10,000+ radiografías  
-✅ **Programa de Screening**: Identificación de brotes epidemiológicos  
+ 
 
 ### Ejemplo de Reporte Generado
 
@@ -282,8 +275,6 @@ pneumoscan-ai/
 │   └── 📁 cpu_local/
 │       ├── 📁 plots/
 │       └── 📁 reports/
-├── 📁 notebooks/                       # Jupyter notebooks
-├── 📁 docs/                           # Documentación
 └── 📁 tests/                          # Tests unitarios
 ```
 
@@ -313,13 +304,8 @@ Este proyecto está licenciado bajo la Licencia MIT - ve el archivo [LICENSE](LI
 
 ### Equipo DevSharks BQ
 
-- **GitHub**: [@tu-usuario](https://github.com/laurapra17)
-- **Email**: pneumoscan.devsharksbq@gmail.com
+- **GitHub**: [@laurapra17](https://github.com/laurapra17)
 - **LinkedIn**: [Laura Patricia Rodriguez Angulo]((https://www.linkedin.com/in/laurarodriguez17/))
-
-### Enlaces del Proyecto
-- **Documentación**: [https://pneumoscan-ai.readthedocs.io](https://pneumoscan-ai.readthedocs.io)
-
 ---
 
 <div align="center">
