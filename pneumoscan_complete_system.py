@@ -1,9 +1,3 @@
-"""
-  PneumoScan AI - Sistema completo Multi-Tarea (CORREGIDO PARA TF 2.19)
-  ----------------------------------------------------------------------
-  Versión corregida que resuelve el error del generador multi-modal
-"""
-
 import os
 import sys
 import numpy as np

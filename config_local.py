@@ -1,5 +1,3 @@
-# config_local.py - Configuración optimizada para tu PC local
-
 import os
 
 # Optimizaciones para CPU
@@ -9,9 +7,9 @@ os.environ['OMP_NUM_THREADS'] = '4'  # Ajusta según tus cores
 
 # Configuración reducida para ejecución local
 LOCAL_CONFIG = {
-    'IMG_SIZE': (128, 128),    # Más pequeño para CPU
-    'BATCH_SIZE': 4,           # Batch pequeño
-    'EPOCHS': 5,               # Pocas epochs para prueba
-    'LEARNING_RATE': 0.001,    # LR más alto
-    'PATIENCE': 3              # Early stopping temprano
+    'IMG_SIZE': (128, 128),    #más pequeño para CPU
+    'BATCH_SIZE': 4,           #Batch pequeño
+    'EPOCHS': 5,               #Pocas epochs para prueba
+    'LEARNING_RATE': 0.001,    #LR más alto
+    'PATIENCE': 3              #Early stopping temprano
 }

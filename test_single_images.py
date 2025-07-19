@@ -22,7 +22,7 @@ def load_pneumoscan_model():
         compile=False
     )
     
-    # Re-compilar
+    #re-compilar
     model.compile(
         optimizer='adam',
         loss={
@@ -54,7 +54,7 @@ def list_available_images():
                     images = list(class_path.glob('*.jpeg')) + list(class_path.glob('*.jpg'))
                     print(f"   {class_name}: {len(images)} imágenes")
                     
-                    # Guardar algunas para mostrar como ejemplos
+                    #guardar algunas para mostrar como ejemplos
                     if images and len(available_images) < 10:
                         for img in images[:3]:
                             available_images.append({
@@ -90,7 +90,7 @@ def create_clinical_data(case_type="moderate_pneumonia"):
     
     profile = clinical_profiles.get(case_type, clinical_profiles["moderate_pneumonia"])
     
-    # Convertir a formato normalizado (8 características)
+    #convertir a formato normalizado (8 características)
     clinical_features = np.array([
         profile["age"] / 100.0,                           # age_normalized
         1.0 if profile["fever"] else 0.0,                 # fever
@@ -110,12 +110,12 @@ def analyze_single_image(model, image_path, clinical_data, patient_info):
     print(f" Archivo: {Path(image_path).name}")
     print(f" Ruta: {image_path}")
     
-    # Verificar que la imagen existe
+    #erificar que la imagen existe
     if not os.path.exists(image_path):
         print(f" Imagen no encontrada: {image_path}")
         return None
     
-    # Cargar y procesar imagen
+    #cargar y procesar imagen
     try:
         img = image.load_img(image_path, target_size=(128, 128))
         img_array = image.img_to_array(img) / 255.0
@@ -123,14 +123,14 @@ def analyze_single_image(model, image_path, clinical_data, patient_info):
         
         print(" Imagen cargada y procesada correctamente")
         
-        # Preparar datos clínicos
+        #preparar datos clínicos
         clinical_array = np.expand_dims(clinical_data, axis=0)
         
-        # Realizar predicción
+        #realizar predicción
         print(" Realizando predicción...")
         predictions = model.predict([img_array, clinical_array], verbose=0)
         
-        # Interpretar resultados
+        #interpretar resultados
         return interpret_predictions(predictions, patient_info, image_path)
         
     except Exception as e:
@@ -138,31 +138,30 @@ def analyze_single_image(model, image_path, clinical_data, patient_info):
         return None
 
 def interpret_predictions(predictions, patient_info, image_path):
-    """Interpretar y mostrar resultados de la predicción"""
     
-    # Extraer predicciones
+    #extraer predicciones
     detection_prob = float(predictions[0][0][0])
     type_probs = [float(x) for x in predictions[1][0]]
     severity_probs = [float(x) for x in predictions[2][0]]
     triage_score = float(predictions[3][0][0])
     
-    # Determinar diagnóstico
+    #determinar diagnóstico
     has_pneumonia = detection_prob > 0.5
     confidence_detection = abs(detection_prob - 0.5) * 2
     
-    # Tipo más probable
+    #tipo más probable
     type_names = ['Viral', 'Bacterial', 'Atípica']
     type_index = np.argmax(type_probs)
     predicted_type = type_names[type_index]
     type_confidence = type_probs[type_index]
     
-    # Severidad más probable
+    #ceveridad más probable
     severity_names = ['Leve', 'Moderada', 'Severa']
     severity_index = np.argmax(severity_probs)
     predicted_severity = severity_names[severity_index]
     severity_confidence = severity_probs[severity_index]
     
-    # Categoría de triage
+    #categoría de triage
     if triage_score >= 8.0:
         triage_category = "🔴 CRÍTICA"
         triage_action = "Atención inmediata"
@@ -181,7 +180,7 @@ def interpret_predictions(predictions, patient_info, image_path):
     print("🏥 REPORTE DE DIAGNÓSTICO PNEUMOSCAN AI")
     print("="*70)
     
-    print(f"\n📋 INFORMACIÓN DEL PACIENTE:")
+    print(f"\n INFORMACIÓN DEL PACIENTE:")
     print(f"   • Edad: {patient_info['age']} años")
     print(f"   • Fiebre: {'Sí' if patient_info['fever'] else 'No'}")
     print(f"   • Tos: {'Sí' if patient_info['cough'] else 'No'}")
@@ -191,7 +190,7 @@ def interpret_predictions(predictions, patient_info, image_path):
     print(f"   • FR: {patient_info['respiratory_rate']} rpm")
     print(f"   • SpO2: {patient_info['spo2']}%")
     
-    print(f"\n🔍 RESULTADO PRINCIPAL:")
+    print(f"\n RESULTADO PRINCIPAL:")
     if has_pneumonia:
         print(f"    NEUMONÍA DETECTADA")
         print(f"    Probabilidad: {detection_prob:.3f} ({detection_prob*100:.1f}%)")
@@ -266,19 +265,19 @@ def interactive_single_image_test():
     available_images = list_available_images()
     
     if not available_images:
-        print("❌ No se encontraron imágenes en el dataset")
+        print(" No se encontraron imágenes en el dataset")
         return
     
-    print(f"\n🎯 IMÁGENES DE EJEMPLO DISPONIBLES:")
+    print(f"\n IMÁGENES DE EJEMPLO DISPONIBLES:")
     for i, img_info in enumerate(available_images, 1):
         print(f"   {i}. {img_info['name']} ({img_info['class']}) - {img_info['split']}")
     
-    # Cargar modelo
+    #cargar modelo
     model = load_pneumoscan_model()
     
     while True:
         print(f"\n" + "="*60)
-        print("📸 SELECCIONAR IMAGEN PARA ANALIZAR")
+        print(" SELECCIONAR IMAGEN PARA ANALIZAR")
         print("="*60)
         
         print("\nOpciones:")
@@ -312,7 +311,7 @@ def interactive_single_image_test():
             print(" Opción inválida")
             continue
         
-        # Seleccionar perfil clínico
+        #seleccionar perfil clínico
         print(f"\n👤 PERFIL CLÍNICO DEL PACIENTE:")
         print("1. Normal (sin síntomas)")
         print("2. Neumonía leve")
@@ -332,7 +331,7 @@ def interactive_single_image_test():
         if profile_choice in profile_map:
             clinical_data, patient_info = create_clinical_data(profile_map[profile_choice])
         elif profile_choice == "5":
-            # Datos personalizados
+            #datos personalizados
             print("Ingresa datos del paciente:")
             try:
                 age = int(input("Edad: ") or "50")
@@ -361,19 +360,19 @@ def interactive_single_image_test():
             print("Usando perfil moderado por defecto")
             clinical_data, patient_info = create_clinical_data("moderate_pneumonia")
         
-        # Realizar análisis
+        #realizar análisis
         result = analyze_single_image(model, image_path, clinical_data, patient_info)
         
         if result:
-            # Guardar reporte
+            #guardar reporte
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             filename = f"results/cpu_local/reports/analisis_individual_{timestamp}.txt"
             os.makedirs(os.path.dirname(filename), exist_ok=True)
             
-            # Aquí podrías guardar el reporte completo si quisieras
+            
             print(f"\n Análisis completado exitosamente")
         
-        # Continuar con otra imagen
+        #continuar con otra imagen
         if input("\n¿Analizar otra imagen? (Enter=Sí, 'n'=No): ").strip().lower() == 'n':
             break
     
